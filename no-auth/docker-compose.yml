@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  database:
+    image: mongo
+    container_name: 'mongodb-demo-no-auth'
+    volumes:
+      - ./db:/data/db
+    ports:
+      - 27017:27017

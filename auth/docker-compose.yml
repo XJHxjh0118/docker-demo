@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  database:
+    image: mongo
+    container_name: 'mongodb-demo-auth'
+    environment:
+      - MONGO_INITDB_DATABASE=user
+      - MONGO_INITDB_ROOT_USERNAME=xjh
+      - MONGO_INITDB_ROOT_PASSWORD=123456
+    volumes:
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+      - ./db:/data/db
+    ports:
+      - 27017:27017

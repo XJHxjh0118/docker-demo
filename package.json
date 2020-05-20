@@ -1,0 +1,13 @@
+{
+  "name": "mongo-docker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-mongo-auth": "docker-compose -f ./auth/docker-compose.yml up --build",
+    "build-mongo-no-auth": "docker-compose -f ./no-auth/docker-compose.yml up --build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
